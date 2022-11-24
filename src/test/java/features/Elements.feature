@@ -1,4 +1,11 @@
 Feature: Elements
+
+  Scenario: Click Elements
+
+    Given user is on home page
+    When user click elements
+    Then user check page
+
   Scenario: Text Box
 
     Given user is on elements page

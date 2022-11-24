@@ -34,5 +34,9 @@ public class ElementHelper {
     public void sendKey(By key, String text){
         findElement(key).sendKeys(text);
     }
+    public boolean getText(By key){
+        findElement(key).getText();
+        return true;
+    }
     public void sendEnter(By key) { findElement(key).sendKeys(Keys.ENTER);}
 }
