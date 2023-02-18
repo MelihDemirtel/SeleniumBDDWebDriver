@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,29 +10,29 @@ import util.DriverFactory;
 
 public class TextBoxSteps {
     WebDriver driver = DriverFactory.getDriver();
-    TextBoxPage textBoxPage = new TextBoxPage(driver);
+    TextBoxPage TextBoxPage = new TextBoxPage(driver);
 
     @Given("user is on elements page")
     public void userIsOnElementsPage() {
         TextBoxPage.textBoxPage();
     }
 
-    @When("user click text box")
+    @And("user click text box")
     public void userClickTextBox() {
         TextBoxPage.clickTextBox();
     }
 
-    @When("user write full name")
+    @And("user write full name")
     public void userWriteFullName() {
         TextBoxPage.sendFullName();
     }
 
-    @When("user write email")
+    @And("user write email")
     public void userWriteEmail() {
         TextBoxPage.sendEmail();
     }
 
-    @When("user write current address")
+    @And("user write current address")
     public void userWriteCurrentAddress() {
         TextBoxPage.sendCurrentAddress();
     }
@@ -40,9 +41,8 @@ public class TextBoxSteps {
     public void userClickSubmit() {
         TextBoxPage.clickSubmit();
     }
-
-    @Then("user check informations")
-    public void userCheckInformations() {
+    @Then("user check information")
+    public void userCheckInformation() {
         TextBoxPage.assertInfo();
     }
 }
